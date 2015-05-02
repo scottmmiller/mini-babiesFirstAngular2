@@ -1,0 +1,23 @@
+/** {
+    border: 1px solid red;
+}*/
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+   	font-size: 18px;
+}
+
+body {
+    background-color: seagreen;
+}
+
+input {
+	height: 2.5em;
+}
+
+button {
+	border-radius: 15%;
+	border: none;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app='friendsList'>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <title>Babies First Angular II</title>
+    </head>
+    <body ng-controller="MainController">
+
+    	<div>
+    		<input type='text' placeholder='Enter name here...' ng-model='newPerson.name'>
+        	<p>Hello {{newPerson.name}} <br />
+ 			How old are you?</p>
+        	<input type='text' placeholder='Enter age here...' ng-model='newPerson.age'>
+        	<button ng-click='addPerson()'>Submit</button>
+    	</div>
+
+    	<div>
+    		<h1> My People </h1>
+    		<div ng-repeat='person in peopleArr | filter:searchText | orderBy: "name"'>
+    			<p> Name: {{person.name}} <br />
+    			Age: {{person.age}} <br />
+    			{{person.dateAdded | date:'short'}} </p>
+    		</div>
+    	</div>
+
+		<div>
+			<input type='text' placeholder="Search term here..." ng-model='searchText'>
+		</div>
+        <script type="text/javascript" src='js/angular.min.js'></script>
+        <script type="text/javascript" src='js/app.js'></script>
+        <script type="text/javascript" src='js/controllers/MainController.js'></script>
+    </body>
+</html>
